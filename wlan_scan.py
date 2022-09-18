@@ -38,7 +38,7 @@ BSS d0:79:80:1b:3c:71(on wlan0)
             print('retry cmd...')
             continue
 
-        signal_level = 0
+        signal_level = -99
         for signal_line in signal_lines: # 例如 signal: -28.00 dBm
             try:
                 # 字符串处理得到数字部分的字符串
@@ -46,8 +46,7 @@ BSS d0:79:80:1b:3c:71(on wlan0)
                 # 将数字字符串转化为小数
                 signal_dBm = float(signal_dBm)
     
-                # dBm + 70 得到信号强度
-                signal_level_new = signal_dBm + 70
+                signal_level_new = signal_dBm
                 # 四舍五入
                 signal_level_new = round(signal_level_new)
     

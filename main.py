@@ -6,8 +6,8 @@ from wlan_scan import get_signal_level
 
 # 这些全局变量用来在主线程和后台线程之间共享数据
 ssid='CMCC-student'
-RED_THRESHHOLD = 3
-ORANGE_THRESHHOLD = 15
+RED_THRESHHOLD = -67
+ORANGE_THRESHHOLD = -61
 backend_run = True
 signal_level = 0
 color = 'grey'
@@ -36,7 +36,7 @@ def main():
     sg.theme('light grey')
     layout = [[sg.Col([[sg.T('SSID: '+ssid, font=("Arial", 15))],
                        [sg.T(font=("Arial", 30))],
-                       [sg.T(str(0), key='-OUTPUT-', size=(2, 1), font=("Arial", 170))],
+                       [sg.T(str(0), key='-OUTPUT-', size=(3, 1), font=("Arial", 140))],
                        [sg.T(font=("Arial", 10))],
                        [sg.B(image_data=T_ON, k='-TOGGLE-', button_color=sg.theme_background_color(), metadata=True)]],
                        element_justification='center', k='-TOP COL-')]]
