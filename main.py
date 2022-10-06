@@ -6,6 +6,7 @@ from wlan_scan import get_signal_level
 
 # 这些全局变量用来在主线程和后台线程之间共享数据
 ssid='CMCC-student'
+#ssid='imix_park'
 RED_THRESHHOLD = -67
 ORANGE_THRESHHOLD = -61
 backend_run = True
